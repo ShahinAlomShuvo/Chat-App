@@ -26,10 +26,6 @@ const localGuardianValidationSchema = z.object({
 const studentValidationSchema = z.object({
   id: z.string().min(1, "ID is required"),
   name: userNameValidationSchema,
-  password: z
-    .string()
-    .min(1, "Password is required")
-    .max(15, "Password is too long"),
   gender: z.enum(["Male", "Female", "Other"], "Gender is required"),
   dateOfBirth: z.string().min(1, "Date of birth is required"),
   email: z.string().email("Invalid email format"),
@@ -43,7 +39,6 @@ const studentValidationSchema = z.object({
   guardian: guardianValidationSchema,
   localGuardian: localGuardianValidationSchema,
   profileImg: z.string().optional(),
-  isActive: z.boolean().default(true),
   isDeleted: z.boolean().default(false),
 });
 
