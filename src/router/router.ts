@@ -6,11 +6,11 @@ const router = Router();
 
 const moduleRoutes = [
   {
-    path: "/user",
+    path: "/users",
     route: userRoute,
   },
   {
-    path: "/student",
+    path: "/students",
     route: studentRoute,
   },
 ];

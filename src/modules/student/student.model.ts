@@ -6,8 +6,6 @@ import {
   TStudent,
   TUserName,
 } from "./student.interface";
-import config from "../../config";
-import bcrypt from "bcrypt";
 
 const userNameSchema = new Schema<TUserName>(
   {
